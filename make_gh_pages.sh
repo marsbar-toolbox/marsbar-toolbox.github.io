@@ -1,5 +1,5 @@
 #!/bin/bash
-exprt MATLAB_CMD="octave --eval"
+export MATLAB_CMD="octave --eval"
 export MATLABPATH="${MATLABPATH}:${PWD}/m2html"
 
 (cd marsbar/doc && make dist-stamp)
