@@ -1,12 +1,11 @@
 github-pages: github-pages-stamp
 
 github-pages-stamp:
-	(cd marsbar/doc && make dist-stamp)
-	ghp-import -b main -n marsbar/doc/dist/
-	git push origin main:main --force
+	./make_gh_pages.sh
 	@echo
 	@echo "Published to Github"
-	touch github-pages-stamp
+	touch $@
 
 clean:
+	rm -f *-stamp
 	(cd marsbar/doc && make clean)
