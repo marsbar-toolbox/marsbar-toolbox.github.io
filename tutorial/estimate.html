@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Running the ROI analysis &#8212; MarsBaR 0.45 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/marsbar.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/marsbar.css?v=a708aff0" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=d89c9ae5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -43,8 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="running-the-roi-analysis">
-<h1>Running the ROI analysis<a class="headerlink" href="#running-the-roi-analysis" title="Permalink to this headline">¶</a></h1>
+  <section id="running-the-roi-analysis">
+<h1>Running the ROI analysis<a class="headerlink" href="#running-the-roi-analysis" title="Link to this heading">¶</a></h1>
 <p>First, let us estimate the activation within the ROI for the first run. There
 are three stages to the analysis:</p>
 <ol class="arabic simple">
@@ -57,8 +56,8 @@ runs, so we already have a design made for the first run. We are going to use
 this design and the <code class="docutils literal notranslate"><span class="pre">trim_stim</span></code> ROI to extract ROI data from the functional
 scans. Then we will use the design and the extracted data to estimate the
 model.</p>
-<div class="section" id="stage-1-choosing-the-design">
-<h2>Stage 1: choosing the design<a class="headerlink" href="#stage-1-choosing-the-design" title="Permalink to this headline">¶</a></h2>
+<section id="stage-1-choosing-the-design">
+<h2>Stage 1: choosing the design<a class="headerlink" href="#stage-1-choosing-the-design" title="Link to this heading">¶</a></h2>
 <p>Click on the Design button in the MarsBaR window. You should get a menu like
 this:</p>
 <img alt="../_images/design_menu.png" src="../_images/design_menu.png" />
@@ -134,9 +133,9 @@ interfaces?</p>
 option in the design menu and choose the <code class="docutils literal notranslate"><span class="pre">SPM.mat</span></code> file in the
 <code class="docutils literal notranslate"><span class="pre">sess1/SPM8_ana</span></code> directory.  MarsBaR loads the design into memory and
 displays the design matrix in the SPM graphics window.</p>
-</div>
-<div class="section" id="stage-2-extracting-the-data">
-<h2>Stage 2: extracting the data<a class="headerlink" href="#stage-2-extracting-the-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="stage-2-extracting-the-data">
+<h2>Stage 2: extracting the data<a class="headerlink" href="#stage-2-extracting-the-data" title="Link to this heading">¶</a></h2>
 <p>Before we can run the model, we need to extract the ROI data from the
 functional scans. This brings us to the data menu:</p>
 <img alt="../_images/data_menu.png" src="../_images/data_menu.png" />
@@ -242,17 +241,17 @@ console. When the extraction is done, the data is kept in memory. You can
 save the data to disk if you want using the Save data to file option on the
 data menu.</p>
 <p>Now we have the design and the data we can estimate the model.</p>
-</div>
-<div class="section" id="stage-3-estimating-the-model">
-<h2>Stage 3: estimating the model<a class="headerlink" href="#stage-3-estimating-the-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="stage-3-estimating-the-model">
+<h2>Stage 3: estimating the model<a class="headerlink" href="#stage-3-estimating-the-model" title="Link to this heading">¶</a></h2>
 <p>As the sweat pours from your brow, you click on the Results menu in the
 MarsBaR window. Scarcely believing it could be this easy, you choose the
 first item on the menu, <em>Estimate results</em>. It was that easy! MarsBaR
 takes the default design and the extracted data, and runs the
 model. There are more progress reports to the matlab console; finally
 you see the suggestion that you use the results section for assessment.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -261,8 +260,9 @@ you see the suggestion that you use the results section for assessment.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Running the ROI analysis</a><ul>
 <li><a class="reference internal" href="#stage-1-choosing-the-design">Stage 1: choosing the design</a></li>
 <li><a class="reference internal" href="#stage-2-extracting-the-data">Stage 2: extracting the data</a></li>
@@ -271,12 +271,17 @@ you see the suggestion that you use the results section for assessment.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="define.html"
-                        title="previous chapter">Defining ROIs</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="results.html"
-                        title="next chapter">Basic results</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="define.html"
+                          title="previous chapter">Defining ROIs</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="results.html"
+                          title="next chapter">Basic results</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -288,12 +293,12 @@ you see the suggestion that you use the results section for assessment.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -316,8 +321,8 @@ you see the suggestion that you use the results section for assessment.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2000-2015, Matthew Brett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    &#169; Copyright 2000-2015, Matthew Brett.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

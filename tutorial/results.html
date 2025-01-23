@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Basic results &#8212; MarsBaR 0.45 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/marsbar.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/marsbar.css?v=a708aff0" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=d89c9ae5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -43,8 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="basic-results">
-<h1>Basic results<a class="headerlink" href="#basic-results" title="Permalink to this headline">¶</a></h1>
+  <section id="basic-results">
+<h1>Basic results<a class="headerlink" href="#basic-results" title="Link to this heading">¶</a></h1>
 <p>Let us start the assessment by getting some t and F values for the effects in
 the design. Click on the Results button in the MarsBaR window:</p>
 <img alt="../_images/results_menu.png" src="../_images/results_menu.png" />
@@ -123,13 +122,13 @@ the <code class="docutils literal notranslate"><span class="pre">stim_hrf</span>
 ugly fashion in the Matlab window. You might want to enlarge your Matlab
 window to stop the text wrapping in an annoying way. Here is the output on my
 machine:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w"> </span><span class="s">Contrast</span><span class="w"> </span><span class="s">value:</span><span class="w">    </span><span class="s">t</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span><span class="w"></span>
-<span class="o">----------------------------------------------------------------------------------------</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w"> </span><span class="s">Contrast</span><span class="w"> </span><span class="s">value:</span><span class="w">    </span><span class="s">t</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span>
+<span class="o">----------------------------------------------------------------------------------------</span>
 
-<span class="n">stim_hrf</span><span class="w"></span>
-<span class="o">--------------------------</span><span class="w"></span>
+<span class="n">stim_hrf</span>
+<span class="o">--------------------------</span>
 
-<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="mf">2.21</span><span class="p">:</span><span class="w">           </span><span class="mf">4.44</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000011</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000011</span><span class="w"></span>
+<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="mf">2.21</span><span class="p">:</span><span class="w">           </span><span class="mf">4.44</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000011</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000011</span>
 </pre></div>
 </div>
 <p>At the left you see the contrast name. Under this, and to the right, MarsBaR
@@ -154,13 +153,13 @@ are the values that are used for standard second level / random effect
 analyses.</p>
 <p>Just for practice, let us also run an F contrast. Click Statistic table again,
 choose the effects of interest contrast, click Done:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w">       </span><span class="s">Extra</span><span class="w"> </span><span class="s">SS:</span><span class="w">    </span><span class="s">F</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span><span class="w"></span>
-<span class="o">----------------------------------------------------------------------------------------</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w">       </span><span class="s">Extra</span><span class="w"> </span><span class="s">SS:</span><span class="w">    </span><span class="s">F</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span>
+<span class="o">----------------------------------------------------------------------------------------</span>
 
-<span class="n">effects</span><span class="w"> </span><span class="s">of</span><span class="w"> </span><span class="s">interest</span><span class="w"></span>
-<span class="o">--------------------------</span><span class="w"></span>
+<span class="n">effects</span><span class="w"> </span><span class="s">of</span><span class="w"> </span><span class="s">interest</span>
+<span class="o">--------------------------</span>
 
-<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">          </span><span class="mf">40.48</span><span class="p">:</span><span class="w">          </span><span class="mf">25.01</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000000</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000000</span><span class="w"></span>
+<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">          </span><span class="mf">40.48</span><span class="p">:</span><span class="w">          </span><span class="mf">25.01</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000000</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000000</span>
 </pre></div>
 </div>
 <p>Now the Contrast value has become the <em>Extra SS</em>.  This is a measure of the
@@ -168,8 +167,8 @@ variance that would be added to a model that does not contain the effects in
 the contrast.  The F statistic is this measure, adjusted for the number of
 effects, and divided by the residual variance for the whole model. There is
 no simple way of using this <em>Extra SS</em> value in second level analyses.</p>
-<div class="section" id="comparing-fast-and-slow-events">
-<h2>Comparing fast and slow events<a class="headerlink" href="#comparing-fast-and-slow-events" title="Permalink to this headline">¶</a></h2>
+<section id="comparing-fast-and-slow-events">
+<h2>Comparing fast and slow events<a class="headerlink" href="#comparing-fast-and-slow-events" title="Link to this heading">¶</a></h2>
 <p>Our results so far show that there is indeed a highly significant effect of
 visual stimulation on the visual cortex, even for very frequent events. This
 is not a Nature paper so far. To make things a bit more interesting, we can
@@ -196,13 +195,13 @@ this contrast directly using the contrast manager; it is just a t
 statistic with a single 1 in the first column:</p>
 <img alt="../_images/defining_contrast.png" src="../_images/defining_contrast.png" />
 <p>In the end, you get a new statistic table:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w"> </span><span class="s">Contrast</span><span class="w"> </span><span class="s">value:</span><span class="w">    </span><span class="s">t</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span><span class="w"></span>
-<span class="o">----------------------------------------------------------------------------------------</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Contrast</span><span class="w"> </span><span class="s">name</span><span class="w">   </span><span class="s">ROI</span><span class="w"> </span><span class="s">name:</span><span class="w"> </span><span class="s">Contrast</span><span class="w"> </span><span class="s">value:</span><span class="w">    </span><span class="s">t</span><span class="w"> </span><span class="s">statistic:</span><span class="w">  </span><span class="s">Uncorrected</span><span class="w"> </span><span class="s">P:</span><span class="w">    </span><span class="s">Corrected</span><span class="w"> </span><span class="s">P</span>
+<span class="o">----------------------------------------------------------------------------------------</span>
 
-<span class="n">stim_hrf</span><span class="w"></span>
-<span class="o">--------------------------</span><span class="w"></span>
+<span class="n">stim_hrf</span>
+<span class="o">--------------------------</span>
 
-<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="mf">2.96</span><span class="p">:</span><span class="w">           </span><span class="mf">3.98</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000061</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000061</span><span class="w"></span>
+<span class="w">      </span><span class="n">trimmed</span><span class="w"> </span><span class="n">stim</span><span class="w"> </span><span class="nb">run</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w">           </span><span class="mf">2.96</span><span class="p">:</span><span class="w">           </span><span class="mf">3.98</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000061</span><span class="p">:</span><span class="w">       </span><span class="mf">0.000061</span>
 </pre></div>
 </div>
 <p>You can see that the contrast value – which is proportional to the change in
@@ -210,8 +209,8 @@ signal for a single event – is greater for run 3 than for run 1. Despite this,
 the t statistic for run 3 is lower than for run 1. One explanation for this is
 that there are many more events in run 1, so the estimate of signal change per
 event is more reliable (has less variance).</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -220,20 +219,26 @@ event is more reliable (has less variance).</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Basic results</a><ul>
 <li><a class="reference internal" href="#comparing-fast-and-slow-events">Comparing fast and slow events</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="estimate.html"
-                        title="previous chapter">Running the ROI analysis</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="andmore.html"
-                        title="next chapter">Using a structural ROI</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="estimate.html"
+                          title="previous chapter">Running the ROI analysis</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="andmore.html"
+                          title="next chapter">Using a structural ROI</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -245,12 +250,12 @@ event is more reliable (has less variance).</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -273,8 +278,8 @@ event is more reliable (has less variance).</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2000-2015, Matthew Brett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    &#169; Copyright 2000-2015, Matthew Brett.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

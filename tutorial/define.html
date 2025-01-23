@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Defining ROIs &#8212; MarsBaR 0.45 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/marsbar.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/marsbar.css?v=a708aff0" />
     
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <script src="../_static/documentation_options.js?v=d89c9ae5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -43,8 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="defining-rois">
-<h1>Defining ROIs<a class="headerlink" href="#defining-rois" title="Permalink to this headline">¶</a></h1>
+  <section id="defining-rois">
+<h1>Defining ROIs<a class="headerlink" href="#defining-rois" title="Link to this heading">¶</a></h1>
 <p>The preprocessing script has already run an SPM model for run 2 (and run 1 and
 run 3). Now we need to find an activation cluster in the visual cortex.</p>
 <p>Go to the MarsBaR window, and click on ROI definition. You should get a menu
@@ -73,8 +72,8 @@ interface, or from images where ROIs are defined by number labels
 </dd>
 </dl>
 </div>
-<div class="section" id="defining-a-functional-roi">
-<h2>Defining a functional ROI<a class="headerlink" href="#defining-a-functional-roi" title="Permalink to this headline">¶</a></h2>
+<section id="defining-a-functional-roi">
+<h2>Defining a functional ROI<a class="headerlink" href="#defining-a-functional-roi" title="Link to this heading">¶</a></h2>
 <p>We are going to define the functional ROI using the SPM analysis for
 run 2. Select <em>Get SPM cluster(s)…</em>: from the menu. This runs the
 standard SPM results interface. Use the file selection window that SPM
@@ -83,10 +82,6 @@ SPM.mat file and click <em>Done</em>. Choose the <code class="docutils literal n
 the SPM contrast manager, click <em>Done</em>. Then accept all the default
 answers from the interface, like this:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 76%" />
-<col style="width: 24%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Prompt</p></th>
 <th class="head"><p>Response</p></th>
@@ -155,10 +150,6 @@ characters or so, the description can be longer. For the moment, accept the
 defaults, which derive from the coordinates of the voxel under the red arrow
 and the title of the contrast:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Prompt</p></th>
 <th class="head"><p>Response</p></th>
@@ -189,9 +180,9 @@ select ROIs, the MarsBaR GUI can assume that ROI files end with this
 suffix. It will probably make your life easier if you keep to this
 convention.</p>
 </div>
-</div>
-<div class="section" id="review-the-roi">
-<h2>Review the ROI<a class="headerlink" href="#review-the-roi" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="review-the-roi">
+<h2>Review the ROI<a class="headerlink" href="#review-the-roi" title="Link to this heading">¶</a></h2>
 <p>We can now review this ROI to check if it is a good definition of the visual
 cortex. Click on the ROI definition menu in the MarsBaR window, and select
 View…. Choose the ROI and click Done. Your ROI should be displayed in blue on
@@ -210,9 +201,9 @@ can choose any image to display ROIs on by clicking on the
 Options… menu in the MarsBaR window, then choosing Edit Options…,
 followed by Default structural.</p>
 </div>
-</div>
-<div class="section" id="refining-the-roi">
-<h2>Refining the ROI<a class="headerlink" href="#refining-the-roi" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="refining-the-roi">
+<h2>Refining the ROI<a class="headerlink" href="#refining-the-roi" title="Link to this heading">¶</a></h2>
 <p>Now we have reviewed the ROI, we see that the cluster does include
 visual cortex, but there also seems to be some connected activation
 lateral and inferior to the primary visual cortex. The cross-hairs in
@@ -221,8 +212,8 @@ cortex and more lateral voxels. Ideally we would like to restrict the
 ROI to voxels in the primary visual cortex.</p>
 <p>We can do this by defining a box ROI that covers the area we are interested in,
 and combining this with the activation cluster.</p>
-<div class="section" id="defining-a-box-roi">
-<h3>Defining a box ROI<a class="headerlink" href="#defining-a-box-roi" title="Permalink to this headline">¶</a></h3>
+<section id="defining-a-box-roi">
+<h3>Defining a box ROI<a class="headerlink" href="#defining-a-box-roi" title="Link to this heading">¶</a></h3>
 <p>To decide on the box dimensions, click around the ROI in the view interface and
 note the coordinates of the cross-hairs that are shown at the top of the bottom
 left panel. This may suggest to you, as it did to us, that it would be good to
@@ -233,10 +224,6 @@ will see a new menu in the SPM input window:</p>
 <img alt="../_images/roi_build.png" src="../_images/roi_build.png" />
 <p>From the menu, select Box (ranges XYZ). Answer the prompts like this:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 70%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Prompt</p></th>
 <th class="head"><p>Response</p></th>
@@ -270,9 +257,9 @@ both of <code class="docutils literal notranslate"><span class="pre">box_x_-20_2
 should see the box in blue, with the activation cluster overlaid in red.</p>
 <p>We now need to combine the two ROIs, to select only those voxels that are
 shared by the box and the activation cluster.</p>
-</div>
-<div class="section" id="combining-rois">
-<h3>Combining ROIs<a class="headerlink" href="#combining-rois" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="combining-rois">
+<h3>Combining ROIs<a class="headerlink" href="#combining-rois" title="Link to this heading">¶</a></h3>
 <p>Choose ROI Definition, Transform… A new menu comes up in the SPM input
 window. Choose Combine ROIs; select both the box and the cluster ROIs, click
 on Done. The prompt now asks for a function with which to combine the ROIs.
@@ -295,10 +282,10 @@ the <em>union</em> of ROI 1 and ROI 2.</p>
 </div>
 <p>After this, accept the default description, set the label to something like
 “Trimmed stim run 2”, and save the ROI as <code class="docutils literal notranslate"><span class="pre">trim_stim_roi.mat</span></code>.</p>
-</div>
-</div>
-<div class="section" id="writing-the-roi-as-an-image">
-<h2>Writing the ROI as an image<a class="headerlink" href="#writing-the-roi-as-an-image" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="writing-the-roi-as-an-image">
+<h2>Writing the ROI as an image<a class="headerlink" href="#writing-the-roi-as-an-image" title="Link to this heading">¶</a></h2>
 <p>Just for practice, let us write our new ROI as a binary image. You might want
 to do this so you can review the ROI using another program, such as the
 excellent <a class="reference external" href="http://www.mricro.com/">MRIcro</a>. Click on ROI definition, then Export….
@@ -341,8 +328,8 @@ select Base space for ROIs, choose a directory to save the image, and accept
 the default filename for the image, which should be trim_stim. You can check
 this has worked, by finding the SPM buttons window, selecting Display, and
 choosing the new trim_stim.img.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -351,8 +338,9 @@ choosing the new trim_stim.img.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Defining ROIs</a><ul>
 <li><a class="reference internal" href="#defining-a-functional-roi">Defining a functional ROI</a></li>
 <li><a class="reference internal" href="#review-the-roi">Review the ROI</a></li>
@@ -366,12 +354,17 @@ choosing the new trim_stim.img.</p>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="interface.html"
-                        title="previous chapter">The MarsBaR / SPM interface</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="estimate.html"
-                        title="next chapter">Running the ROI analysis</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="interface.html"
+                          title="previous chapter">The MarsBaR / SPM interface</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="estimate.html"
+                          title="next chapter">Running the ROI analysis</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -383,12 +376,12 @@ choosing the new trim_stim.img.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -411,8 +404,8 @@ choosing the new trim_stim.img.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2000-2015, Matthew Brett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    &#169; Copyright 2000-2015, Matthew Brett.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

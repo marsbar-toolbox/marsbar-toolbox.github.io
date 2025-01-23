@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Two and three dots in difference specs &#8212; MarsBaR 0.45 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/marsbar.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/marsbar.css?v=a708aff0" />
     
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/documentation_options.js?v=d89c9ae5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -34,29 +33,29 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="two-and-three-dots-in-difference-specs">
-<span id="dot2-dot3"></span><h1>Two and three dots in difference specs<a class="headerlink" href="#two-and-three-dots-in-difference-specs" title="Permalink to this headline">¶</a></h1>
+  <section id="two-and-three-dots-in-difference-specs">
+<span id="dot2-dot3"></span><h1>Two and three dots in difference specs<a class="headerlink" href="#two-and-three-dots-in-difference-specs" title="Link to this heading">¶</a></h1>
 <p>Thanks to Yarik Halchenko for this explanation.</p>
 <p>Imagine a series of commits A, B, C, D…  Imagine that there are two
 branches, <em>topic</em> and <em>master</em>.  You branched <em>topic</em> off <em>master</em> when
 <em>master</em> was at commit ‘E’.  The graph of the commits looks like this:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="n">A</span><span class="o">---</span><span class="n">B</span><span class="o">---</span><span class="n">C</span><span class="w"> </span><span class="n">topic</span><span class="w"></span>
-<span class="w">     </span><span class="o">/</span><span class="w"></span>
-<span class="n">D</span><span class="o">---</span><span class="n">E</span><span class="o">---</span><span class="n">F</span><span class="o">---</span><span class="n">G</span><span class="w"> </span><span class="n">master</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">     </span><span class="n">A</span><span class="o">---</span><span class="n">B</span><span class="o">---</span><span class="n">C</span><span class="w"> </span><span class="n">topic</span>
+<span class="w">     </span><span class="o">/</span>
+<span class="n">D</span><span class="o">---</span><span class="n">E</span><span class="o">---</span><span class="n">F</span><span class="o">---</span><span class="n">G</span><span class="w"> </span><span class="n">master</span>
 </pre></div>
 </div>
 <p>Then:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">diff</span><span class="w"> </span><span class="s">master..topic</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">diff</span><span class="w"> </span><span class="s">master..topic</span>
 </pre></div>
 </div>
 <p>will output the difference from G to C (i.e. with effects of F and G),
 while:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">diff</span><span class="w"> </span><span class="s">master...topic</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">diff</span><span class="w"> </span><span class="s">master...topic</span>
 </pre></div>
 </div>
 <p>would output just differences in the topic branch (i.e. only A, B, and
 C).</p>
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -76,12 +75,12 @@ C).</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -97,8 +96,8 @@ C).</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2000-2015, Matthew Brett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+    &#169; Copyright 2000-2015, Matthew Brett.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>
