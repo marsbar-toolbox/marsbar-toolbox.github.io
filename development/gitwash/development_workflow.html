@@ -1,45 +1,389 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Development workflow &#8212; MarsBaR 0.45 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/marsbar.css?v=a708aff0" />
-    
-    <script src="../../_static/documentation_options.js?v=d89c9ae5"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=ef544bf2"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'development/gitwash/development_workflow';</script>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MarsBaR 0.45 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Development workflow</a></li> 
-      </ul>
-    </div>  
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.45" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">MarsBaR 0.45 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About MarsBaR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download.html">Download and install</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">MarsBaR tutorial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/gettingstarted.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/interface.html">The MarsBaR / SPM interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/define.html">Defining ROIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/estimate.html">Running the ROI analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/results.html">Basic results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/andmore.html">Using a structural ROI</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">MarsBaR FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Support</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Reading and writing MarsBaR code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code.html">Getting the latest development code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apidocs.html">API documentation</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/marsbar-toolbox/marsbar" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/marsbar-toolbox/marsbar/issues/new?title=Issue%20on%20page%20%2Fdevelopment/gitwash/development_workflow.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/development/gitwash/development_workflow.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Development workflow</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-summary">Workflow summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-new-feature-branch">Making a new feature branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-editing-workflow">The editing workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-more-detail">In more detail</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-code-review">Asking for code review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-your-changes-to-be-merged-with-the-main-repo">Asking for your changes to be merged with the main repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-from-trunk">Merging from trunk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-detail">In detail</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-a-branch-on-github">Deleting a branch on github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#several-people-sharing-a-single-repository">Several people sharing a single repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-your-repository">Exploring your repository</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="development-workflow">
-<span id="id1"></span><h1>Development workflow<a class="headerlink" href="#development-workflow" title="Link to this heading">¶</a></h1>
+<span id="id1"></span><h1>Development workflow<a class="headerlink" href="#development-workflow" title="Link to this heading">#</a></h1>
 <p>You already have your own forked copy of the <a class="reference external" href="http://marsbar.sourceforge.net">marsbar</a> repository, by
 following <a class="reference internal" href="forking_hell.html#forking"><span class="std std-ref">Making your own copy (fork) of marsbar</span></a>, <a class="reference internal" href="set_up_fork.html#set-up-fork"><span class="std std-ref">Set up your fork</span></a>, and you have configured
 <a class="reference external" href="http://git-scm.com/">git</a> by following <a class="reference internal" href="configure_git.html#configure-git"><span class="std std-ref">Configure git</span></a>.</p>
 <section id="workflow-summary">
-<h2>Workflow summary<a class="headerlink" href="#workflow-summary" title="Link to this heading">¶</a></h2>
+<h2>Workflow summary<a class="headerlink" href="#workflow-summary" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Keep your <code class="docutils literal notranslate"><span class="pre">master</span></code> branch clean of edits that have not been merged
 to the main <a class="reference external" href="http://marsbar.sourceforge.net">marsbar</a> development repo.  Your <code class="docutils literal notranslate"><span class="pre">master</span></code> then will follow
@@ -54,7 +398,7 @@ keeping history as clear as possible.</p>
 <p>See - for example - <a class="reference external" href="http://www.mail-archive.com/dri-devel&#64;lists.sourceforge.net/msg39091.html">linux git workflow</a>.</p>
 </section>
 <section id="making-a-new-feature-branch">
-<h2>Making a new feature branch<a class="headerlink" href="#making-a-new-feature-branch" title="Link to this heading">¶</a></h2>
+<h2>Making a new feature branch<a class="headerlink" href="#making-a-new-feature-branch" title="Link to this heading">#</a></h2>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">branch</span><span class="w"> </span><span class="s">my-new-feature</span>
 <span class="n">git</span><span class="w"> </span><span class="s">checkout</span><span class="w"> </span><span class="s">my-new-feature</span>
 </pre></div>
@@ -76,9 +420,9 @@ by default), git will have a link to your <a class="reference external" href="ht
 <code class="docutils literal notranslate"><span class="pre">my-new-feature</span></code> branch in the <a class="reference external" href="http://github.com">github</a> repo.</p>
 </section>
 <section id="the-editing-workflow">
-<h2>The editing workflow<a class="headerlink" href="#the-editing-workflow" title="Link to this heading">¶</a></h2>
+<h2>The editing workflow<a class="headerlink" href="#the-editing-workflow" title="Link to this heading">#</a></h2>
 <section id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h3>
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>#<span class="w"> </span><span class="n">hack</span><span class="w"> </span><span class="n">hack</span>
 <span class="n">git</span><span class="w"> </span><span class="s">add</span><span class="w"> </span><span class="s">my_new_file</span>
 <span class="n">git</span><span class="w"> </span><span class="s">commit</span><span class="w"> </span><span class="o">-</span><span class="n">am</span><span class="w"> </span><span class="s">&#39;NF - some message&#39;</span>
@@ -87,7 +431,7 @@ by default), git will have a link to your <a class="reference external" href="ht
 </div>
 </section>
 <section id="in-more-detail">
-<h3>In more detail<a class="headerlink" href="#in-more-detail" title="Link to this heading">¶</a></h3>
+<h3>In more detail<a class="headerlink" href="#in-more-detail" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Make some changes</p></li>
 <li><p>See which files have changed with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> (see <a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-status.html">git status</a>).
@@ -123,7 +467,7 @@ page might also be useful.</p></li>
 </section>
 </section>
 <section id="asking-for-code-review">
-<h2>Asking for code review<a class="headerlink" href="#asking-for-code-review" title="Link to this heading">¶</a></h2>
+<h2>Asking for code review<a class="headerlink" href="#asking-for-code-review" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Go to your repo URL - e.g. <code class="docutils literal notranslate"><span class="pre">http://github.com/your-user-name/marsbar</span></code>.</p></li>
 <li><p>Click on the <em>Branch list</em> button:</p>
@@ -141,7 +485,7 @@ review.  The URL will look something like:
 <code class="docutils literal notranslate"><span class="pre">http://github.com/your-user-name/marsbar/compare/master...my-new-feature</span></code>.
 There’s an example at
 <a class="reference external" href="http://github.com/matthew-brett/nipy/compare/master...find-install-data">http://github.com/matthew-brett/nipy/compare/master…find-install-data</a>
-See: <a class="reference external" href="http://github.com/blog/612-introducing-github-compare-view">http://github.com/blog/612-introducing-github-compare-view</a> for
+See: <a class="github reference external" href="http://github.com/blog/612-introducing-github-compare-view">blog/612-introducing-github-compare-view</a> for
 more detail.</p></li>
 </ol>
 <p>The generated comparison, is between your feature branch
@@ -152,7 +496,7 @@ Note the three dots in the URL above (<code class="docutils literal notranslate"
 see <a class="reference internal" href="dot2_dot3.html#dot2-dot3"><span class="std std-ref">Two and three dots in difference specs</span></a>.</p>
 </section>
 <section id="asking-for-your-changes-to-be-merged-with-the-main-repo">
-<h2>Asking for your changes to be merged with the main repo<a class="headerlink" href="#asking-for-your-changes-to-be-merged-with-the-main-repo" title="Link to this heading">¶</a></h2>
+<h2>Asking for your changes to be merged with the main repo<a class="headerlink" href="#asking-for-your-changes-to-be-merged-with-the-main-repo" title="Link to this heading">#</a></h2>
 <p>When you are ready to ask for the merge of your code:</p>
 <ol class="arabic">
 <li><p>Go to the URL of your forked repo, say
@@ -166,10 +510,10 @@ feel free to add others from the list as you like.</p>
 </ol>
 </section>
 <section id="merging-from-trunk">
-<h2>Merging from trunk<a class="headerlink" href="#merging-from-trunk" title="Link to this heading">¶</a></h2>
+<h2>Merging from trunk<a class="headerlink" href="#merging-from-trunk" title="Link to this heading">#</a></h2>
 <p>This updates your code from the upstream <a class="reference external" href="http://github.com/matthew-brett/marsbar">marsbar github</a>  repo.</p>
 <section id="id2">
-<h3>Overview<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<h3>Overview<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>#<span class="w"> </span><span class="n">go</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="n">branch</span>
 <span class="n">git</span><span class="w"> </span><span class="s">checkout</span><span class="w"> </span><span class="s">master</span>
 #<span class="w"> </span><span class="n">pull</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">github</span>
@@ -180,7 +524,7 @@ feel free to add others from the list as you like.</p>
 </div>
 </section>
 <section id="in-detail">
-<h3>In detail<a class="headerlink" href="#in-detail" title="Link to this heading">¶</a></h3>
+<h3>In detail<a class="headerlink" href="#in-detail" title="Link to this heading">#</a></h3>
 <p>We suggest that you do this only for your <code class="docutils literal notranslate"><span class="pre">master</span></code> branch, and leave
 your ‘feature’ branches unmerged, to keep their history as clean as
 possible.  This makes code review easier:</p>
@@ -200,7 +544,7 @@ the upstream repo to a copy on your local machine:</p>
 </section>
 </section>
 <section id="deleting-a-branch-on-github">
-<h2>Deleting a branch on <a class="reference external" href="http://github.com">github</a><a class="headerlink" href="#deleting-a-branch-on-github" title="Link to this heading">¶</a></h2>
+<h2>Deleting a branch on <a class="reference external" href="http://github.com">github</a><a class="headerlink" href="#deleting-a-branch-on-github" title="Link to this heading">#</a></h2>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="s">checkout</span><span class="w"> </span><span class="s">master</span>
 #<span class="w"> </span><span class="nb">delete</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="n">locally</span>
 <span class="n">git</span><span class="w"> </span><span class="s">branch</span><span class="w"> </span><span class="o">-</span><span class="n">D</span><span class="w"> </span><span class="n">my</span><span class="o">-</span><span class="n">unwanted</span><span class="o">-</span><span class="n">branch</span>
@@ -209,10 +553,10 @@ the upstream repo to a copy on your local machine:</p>
 </pre></div>
 </div>
 <p>(Note the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> before <code class="docutils literal notranslate"><span class="pre">test-branch</span></code>.  See also:
-<a class="reference external" href="http://github.com/guides/remove-a-remote-branch">http://github.com/guides/remove-a-remote-branch</a></p>
+<a class="github reference external" href="http://github.com/guides/remove-a-remote-branch">guides/remove-a-remote-branch</a></p>
 </section>
 <section id="several-people-sharing-a-single-repository">
-<h2>Several people sharing a single repository<a class="headerlink" href="#several-people-sharing-a-single-repository" title="Link to this heading">¶</a></h2>
+<h2>Several people sharing a single repository<a class="headerlink" href="#several-people-sharing-a-single-repository" title="Link to this heading">#</a></h2>
 <p>If you want to work on some stuff with other people, where you are all
 committing into the same repository, or even the same branch, then just
 share it via <a class="reference external" href="http://github.com">github</a>.</p>
@@ -238,7 +582,7 @@ usual:</p>
 </div>
 </section>
 <section id="exploring-your-repository">
-<h2>Exploring your repository<a class="headerlink" href="#exploring-your-repository" title="Link to this heading">¶</a></h2>
+<h2>Exploring your repository<a class="headerlink" href="#exploring-your-repository" title="Link to this heading">#</a></h2>
 <p>To see a graphical representation of the repository branches and
 commits:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">gitk</span><span class="w"> </span><span class="o">--</span><span class="nb">all</span>
@@ -254,72 +598,98 @@ repo.</p>
 </section>
 
 
-            <div class="clearer"></div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-summary">Workflow summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-new-feature-branch">Making a new feature branch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-editing-workflow">The editing workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-more-detail">In more detail</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-code-review">Asking for code review</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asking-for-your-changes-to-be-merged-with-the-main-repo">Asking for your changes to be merged with the main repo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-from-trunk">Merging from trunk</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-detail">In detail</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-a-branch-on-github">Deleting a branch on github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#several-people-sharing-a-single-repository">Several people sharing a single repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-your-repository">Exploring your repository</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Development workflow</a><ul>
-<li><a class="reference internal" href="#workflow-summary">Workflow summary</a></li>
-<li><a class="reference internal" href="#making-a-new-feature-branch">Making a new feature branch</a></li>
-<li><a class="reference internal" href="#the-editing-workflow">The editing workflow</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#in-more-detail">In more detail</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#asking-for-code-review">Asking for code review</a></li>
-<li><a class="reference internal" href="#asking-for-your-changes-to-be-merged-with-the-main-repo">Asking for your changes to be merged with the main repo</a></li>
-<li><a class="reference internal" href="#merging-from-trunk">Merging from trunk</a><ul>
-<li><a class="reference internal" href="#id2">Overview</a></li>
-<li><a class="reference internal" href="#in-detail">In detail</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#deleting-a-branch-on-github">Deleting a branch on github</a></li>
-<li><a class="reference internal" href="#several-people-sharing-a-single-repository">Several people sharing a single repository</a></li>
-<li><a class="reference internal" href="#exploring-your-repository">Exploring your repository</a></li>
-</ul>
-</li>
-</ul>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2000-2025, Matthew Brett.
+      <br/>
+    
+  </p>
 
   </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/development/gitwash/development_workflow.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
+          </footer>
+        
+
+      </main>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MarsBaR 0.45 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Development workflow</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2000-2015, Matthew Brett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
-    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
